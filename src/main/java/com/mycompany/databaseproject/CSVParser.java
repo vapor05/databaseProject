@@ -89,17 +89,6 @@ public class CSVParser {
         return hasHeaderRow && processedRows == 0;
     }
     
-    public String[] getRowArray()
-    {
-        ArrayList<String> columnList = new ArrayList<>();
-        
-        while(sourceScan.hasNext())
-        {
-            columnList.add(sourceScan.next());
-        }
-        return (String[]) columnList.toArray();
-    }
-    
     public int getColumnNumber()
     {
         return headerColumns.length;
